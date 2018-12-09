@@ -2,6 +2,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Problem 1: Two Sum
+ */
 class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
