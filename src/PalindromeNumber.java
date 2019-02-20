@@ -1,7 +1,7 @@
 /**
  * Problem 9: Palindrome Number
  */
-class PalindromeNumber {
+public class PalindromeNumber {
 
     public boolean isPalindrome(int x) {
         if (x < 0) {

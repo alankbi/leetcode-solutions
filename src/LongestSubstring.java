@@ -4,7 +4,7 @@ import java.util.Set;
 /**
  * Problem 3. Longest Substring Without Repeating Characters
  */
-class LongestSubstring {
+public class LongestSubstring {
 
     public int lengthOfLongestSubstring(String s) {
         int longest = 0;

@@ -1,7 +1,7 @@
 /**
  * Problem 14: Longest Common Prefix
  */
-class LongestCommonPrefix {
+public class LongestCommonPrefix {
 
     public String longestCommonPrefix(String[] strs) {
         StringBuilder result = new StringBuilder();

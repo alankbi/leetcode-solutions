@@ -1,7 +1,7 @@
 /**
  * Problem 7: Reverse Integer
  */
-class ReverseInteger {
+public class ReverseInteger {
 
     public int reverse(int x) {
         long temp = Math.abs((long) x);

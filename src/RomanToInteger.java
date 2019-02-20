@@ -4,7 +4,7 @@ import java.util.Map;
 /**
  * Problem 13: Roman To Integer
  */
-class RomanToInteger {
+public class RomanToInteger {
 
     public int romanToInt(String s) {
         Map<Character, Integer> symbols = new HashMap<>();

@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Problem 20. Valid Parentheses
  */
-class ValidParentheses {
+public class ValidParentheses {
 
     public boolean isValid(String s) {
         Map<Character, Character> brackets = new HashMap<>();
