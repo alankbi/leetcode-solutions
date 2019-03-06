@@ -1,3 +1,5 @@
+package easy;
+
 /**
  * Problem 9: Palindrome Number
  */

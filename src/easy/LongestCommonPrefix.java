@@ -1,3 +1,5 @@
+package easy;
+
 /**
  * Problem 14: Longest Common Prefix
  */

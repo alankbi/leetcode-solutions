@@ -1,3 +1,5 @@
+package medium;
+
 /**
  * Problem 2: Add Two Numbers
  */
