@@ -1,5 +1,7 @@
 package easy;
 
+import util.ListNode;
+
 /**
  * Problem 21: Merge Two Sorted Lists
  */
@@ -54,25 +56,5 @@ public class MergeTwoLists {
 
         ListNode result = new MergeTwoLists().mergeTwoLists(l1, l2);
         System.out.println(result);
-    }
-
-    public static class ListNode {
-        public int val;
-        public ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        public String toString() {
-            String str = "" + val;
-            ListNode temp = next;
-
-            while (temp != null) {
-                str += "->" + temp.val;
-                temp = temp.next;
-            }
-            return str;
-        }
     }
 }

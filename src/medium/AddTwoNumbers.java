@@ -1,5 +1,7 @@
 package medium;
 
+import util.ListNode;
+
 /**
  * Problem 2: Add Two Numbers
  */
@@ -41,30 +43,5 @@ public class AddTwoNumbers {
 
         ListNode sum = new AddTwoNumbers().addTwoNumbers(l1, l2);
         System.out.println(sum.toString());
-    }
-
-    public static class ListNode {
-        public int val;
-        public ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        public ListNode(int x, ListNode next) {
-            val = x;
-            this.next = next;
-        }
-
-        public String toString() {
-            String str =  "" + val;
-            ListNode temp = next;
-
-            while (temp != null) {
-                str += " -> " + temp.val;
-                temp = temp.next;
-            }
-            return str;
-        }
     }
 }

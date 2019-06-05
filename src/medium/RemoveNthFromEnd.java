@@ -1,5 +1,7 @@
 package medium;
 
+import util.ListNode;
+
 /**
  * Problem 19: Remove Nth Node From End of List
  */
@@ -33,25 +35,5 @@ public class RemoveNthFromEnd {
 
         ListNode result = new RemoveNthFromEnd().removeNthFromEnd(head, 2);
         System.out.println(result);
-    }
-
-    public static class ListNode {
-        public int val;
-        public ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        public String toString() {
-            String str = "" + val;
-            ListNode temp = next;
-
-            while (temp != null) {
-                str += "->" + temp.val;
-                temp = temp.next;
-            }
-            return str;
-        }
     }
 }
