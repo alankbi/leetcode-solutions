@@ -5,13 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Problem 39: Combination Sum
+ * Problem 40: Combination Sum II
  */
-public class CombinationSum {
+public class CombinationSum2 {
     private List<List<Integer>> solutions;
 
     @SuppressWarnings("Duplicates")
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         solutions = new ArrayList<>();
 
         // Sort in descending order
@@ -37,25 +37,29 @@ public class CombinationSum {
         }
 
         int num = candidates[index];
+        int duplicateCount = 0;
+        while (index < candidates.length && candidates[index] == num) {
+            duplicateCount++;
+            index++;
+        }
+
         // Generate solutions without current element
-        combinationSum(candidates, target, index + 1, current);
+        combinationSum(candidates, target, index, current);
         // Generate solutions with all valid counts of current element
-        int count = 0;
-        while (target >= num) {
+        for (int i = 0; i < duplicateCount; i++) {
             target -= num;
             current.add(num);
-            combinationSum(candidates, target, index + 1, current);
-            count++;
+            combinationSum(candidates, target, index, current);
         }
 
         // Remove elements when done with this recursion level
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < duplicateCount; i++) {
             current.remove(current.size() - 1);
         }
     }
 
     public static void main(String[] args) {
-        List<List<Integer>> result = new CombinationSum().combinationSum(new int[] {2, 3, 5}, 8);
+        List<List<Integer>> result = new CombinationSum2().combinationSum2(new int[] {10, 1, 2, 7, 6, 1, 5}, 8);
         System.out.println(result);
     }
 }
