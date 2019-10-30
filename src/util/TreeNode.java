@@ -15,4 +15,19 @@ public class TreeNode {
         left = l;
         right = r;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        constructString(this, s);
+        return s.toString();
+    }
+
+    private void constructString(TreeNode node, StringBuilder s) {
+        if (node != null) {
+            constructString(node.left, s);
+            s.append(node.val).append(" ");
+            constructString(node.right, s);
+        }
+    }
 }
