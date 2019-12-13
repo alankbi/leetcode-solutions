@@ -37,7 +37,7 @@ public class SimplifyPath {
     }
 
     public static void main(String[] args) {
-        String result = new SimplifyPath().simplifyPath("/a//b////c/d//././/..");
+        String result = new SimplifyPath().simplifyPath("/home/");
         System.out.println(result);
     }
 }
