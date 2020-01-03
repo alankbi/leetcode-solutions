@@ -1,31 +1,27 @@
 package medium;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * Problem 3. Longest Substring Without Repeating Characters
+ * Problem 3: Longest Substring Without Repeating Characters
  */
 public class LongestSubstring {
 
     public int lengthOfLongestSubstring(String s) {
-        int longest = 0;
-        Set<Character> uniqueChars = new HashSet<>();
+        Map<Character, Integer> map = new HashMap<>();
+        int left = 0;
+        int max = 0;
 
-        for (int i = 0; i < s.length() - longest; i++) {
-            int count = 0;
-            int index = i;
-            while (index < s.length() && !uniqueChars.contains(s.charAt(index))) {
-                uniqueChars.add(s.charAt(index));
-                count++;
-                index++;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (map.containsKey(c) && map.get(c) >= left) {
+                left = map.get(c) + 1;
             }
-            if (count > longest) {
-                longest = count;
-            }
-            uniqueChars.clear();
+            map.put(c, i);
+            max = Math.max(max, i - left + 1);
         }
-        return longest;
+        return max;
     }
 
     public static void main(String[] args) {
